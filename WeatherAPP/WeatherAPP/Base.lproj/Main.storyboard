@@ -23,13 +23,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcb-E7-tJN">
-                                <rect key="frame" x="0.0" y="333" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X6b-Et-Ln9">
-                                        <rect key="frame" x="19.5" y="0.0" width="337.5" height="250"/>
+                                        <rect key="frame" x="18.5" y="0.0" width="338" height="250.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqY-uu-rpm">
-                                        <rect key="frame" x="19" y="250" width="187.5" height="66.5"/>
+                                        <rect key="frame" x="18" y="250.5" width="187.5" height="66"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -48,8 +48,8 @@
                                     <constraint firstItem="X6b-Et-Ln9" firstAttribute="top" secondItem="gcb-E7-tJN" secondAttribute="top" id="oLT-gi-DAa"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjJ-gC-cRH">
-                                <rect key="frame" x="207" y="249.5" width="150" height="83.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22℃" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjJ-gC-cRH" userLabel="temperatureLabel">
+                                <rect key="frame" x="206.5" y="220" width="150" height="83.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -62,16 +62,27 @@
                                     <segue destination="LGc-T2-raW" kind="show" identifier="goToSecondView" id="bsq-bW-jeX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="广安" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1om-4J-7Jx">
+                                <rect key="frame" x="18.5" y="220" width="69" height="83.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="86" id="4KC-Dg-ALn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bsz-q1-vrK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Fi-Mf-3Lf"/>
                             <constraint firstItem="Bsz-q1-vrK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2DO-OS-5dC"/>
+                            <constraint firstItem="1om-4J-7Jx" firstAttribute="centerY" secondItem="CjJ-gC-cRH" secondAttribute="centerY" id="3lc-u2-xoD"/>
                             <constraint firstItem="Bsz-q1-vrK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AiD-e1-CkA"/>
+                            <constraint firstItem="CjJ-gC-cRH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1om-4J-7Jx" secondAttribute="trailing" constant="30" id="ByE-QE-PXJ"/>
                             <constraint firstAttribute="trailing" secondItem="IeO-ua-Bpc" secondAttribute="trailing" constant="16" id="Hs6-VS-mxM"/>
                             <constraint firstItem="IeO-ua-Bpc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Ire-Zc-d9b"/>
                             <constraint firstAttribute="bottom" secondItem="gcb-E7-tJN" secondAttribute="bottom" id="O2p-DL-1Qz"/>
-                            <constraint firstItem="gcb-E7-tJN" firstAttribute="top" secondItem="CjJ-gC-cRH" secondAttribute="bottom" id="TSF-W1-w1U"/>
+                            <constraint firstItem="gcb-E7-tJN" firstAttribute="top" secondItem="CjJ-gC-cRH" secondAttribute="bottom" constant="30" id="TSF-W1-w1U"/>
                             <constraint firstItem="CjJ-gC-cRH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:8" id="UDk-LL-o3g"/>
                             <constraint firstItem="CjJ-gC-cRH" firstAttribute="trailing" secondItem="X6b-Et-Ln9" secondAttribute="trailing" id="fKd-9M-mdY"/>
                             <constraint firstItem="gcb-E7-tJN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="hJy-jZ-wYm"/>
@@ -79,14 +90,22 @@
                             <constraint firstItem="Bsz-q1-vrK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i0E-Ib-F2l"/>
                             <constraint firstItem="gcb-E7-tJN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mlb-HB-Rjd"/>
                             <constraint firstAttribute="trailing" secondItem="gcb-E7-tJN" secondAttribute="trailing" id="shd-6T-XWq"/>
+                            <constraint firstItem="1om-4J-7Jx" firstAttribute="height" secondItem="CjJ-gC-cRH" secondAttribute="height" id="tJf-oh-wUH"/>
+                            <constraint firstItem="1om-4J-7Jx" firstAttribute="leading" secondItem="X6b-Et-Ln9" secondAttribute="leading" id="vjk-hc-iYo"/>
                             <constraint firstItem="CjJ-gC-cRH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2:5" id="wxt-nG-ZGQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="1om-4J-7Jx" id="1Jy-Of-BIE"/>
+                        <outlet property="temperatureLabel" destination="CjJ-gC-cRH" id="TqA-JR-Fha"/>
+                        <outlet property="weatherImageView" destination="X6b-Et-Ln9" id="8NI-Lv-vJ1"/>
+                        <outlet property="weatherLabel" destination="AqY-uu-rpm" id="gj8-fA-bxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="125"/>
+            <point key="canvasLocation" x="-39.200000000000003" y="124.58770614692655"/>
         </scene>
         <!--Change City View Controller-->
         <scene sceneID="fCg-0o-xFU">
@@ -105,21 +124,41 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="return"/>
+                                <connections>
+                                    <action selector="returnButton:" destination="LGc-T2-raW" eventType="touchUpInside" id="jGV-DF-hXI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入城市名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Cs-57-aaj">
                                 <rect key="frame" x="75" y="120" width="225" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUo-Jh-Uxq">
+                                <rect key="frame" x="313" y="120" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="46" id="d9L-p8-OOp"/>
+                                    <constraint firstAttribute="height" constant="30" id="mpp-V8-aWI"/>
+                                </constraints>
+                                <state key="normal" title="确认">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButton:" destination="LGc-T2-raW" eventType="touchUpInside" id="Ydd-xk-UUN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6Cs-57-aaj" firstAttribute="top" secondItem="sF9-Cj-BzN" secondAttribute="top" constant="120" id="4ZX-1G-rOJ"/>
+                            <constraint firstAttribute="trailing" secondItem="jUo-Jh-Uxq" secondAttribute="trailing" constant="16" id="5dc-0G-2CE"/>
                             <constraint firstAttribute="bottom" secondItem="1Ta-cZ-RJd" secondAttribute="bottom" id="Mdx-1x-PWI"/>
                             <constraint firstItem="XOj-VF-yka" firstAttribute="top" secondItem="sF9-Cj-BzN" secondAttribute="top" constant="20" id="RG3-hd-JZv"/>
                             <constraint firstItem="1Ta-cZ-RJd" firstAttribute="leading" secondItem="sF9-Cj-BzN" secondAttribute="leading" id="Vid-Ca-xjc"/>
                             <constraint firstItem="6Cs-57-aaj" firstAttribute="width" secondItem="sF9-Cj-BzN" secondAttribute="width" multiplier="3:5" id="bqH-Og-JFJ"/>
+                            <constraint firstItem="jUo-Jh-Uxq" firstAttribute="centerY" secondItem="6Cs-57-aaj" secondAttribute="centerY" id="dun-oO-tyb"/>
+                            <constraint firstItem="jUo-Jh-Uxq" firstAttribute="leading" secondItem="6Cs-57-aaj" secondAttribute="trailing" constant="13" id="gCL-Q9-DB7"/>
                             <constraint firstItem="6Cs-57-aaj" firstAttribute="centerX" secondItem="sF9-Cj-BzN" secondAttribute="centerX" id="kfx-va-vgA"/>
                             <constraint firstItem="1Ta-cZ-RJd" firstAttribute="top" secondItem="sF9-Cj-BzN" secondAttribute="top" id="oMw-Vb-4sD"/>
                             <constraint firstItem="XOj-VF-yka" firstAttribute="leading" secondItem="sF9-Cj-BzN" secondAttribute="leading" constant="16" id="p94-4H-1P0"/>
@@ -127,10 +166,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ykH-Ob-NQp"/>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="6Cs-57-aaj" id="eph-Gb-oxr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lcn-Xk-AHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="125"/>
+            <point key="canvasLocation" x="735" y="125"/>
         </scene>
     </scenes>
     <resources>

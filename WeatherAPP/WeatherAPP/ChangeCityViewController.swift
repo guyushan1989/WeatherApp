@@ -8,12 +8,23 @@
 
 import UIKit
 
-class ChangeCityViewController: UIViewController {
+protocol City {
+    func city(cityName: String)
+}
 
+class ChangeCityViewController: UIViewController {
+    
+    
+    @IBOutlet weak var cityTextField: UITextField!
+    var cityDelegate: City?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        cityTextField.becomeFirstResponder()
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +32,21 @@ class ChangeCityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func returnButton(_ sender: UIButton) {
+        cityTextField.resignFirstResponder()
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func okButton(_ sender: UIButton) {
+        cityTextField.endEditing(true)
+        if cityTextField.text != "" {
+            guard let newCity = cityTextField.text else { return }
+            cityDelegate?.city(cityName: newCity)
+            self.dismiss(animated: true, completion: nil)
+        }
+//        self.dismiss(animated: true) {
+//            self.cityDelegate?.city(cityName: self.cityTextField.text!)
+//        }
+   }
+    
 }

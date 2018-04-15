@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct WeatherDataModel {
+    var city = ""
+    var temperature = 0
+    var weather = ""
+    var iconURL = ""
+    
+}
